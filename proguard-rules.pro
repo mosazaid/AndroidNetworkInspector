@@ -1,6 +1,6 @@
 # Add project specific ProGuard rules here.
 # Keep Room entities and DAOs
--keep class com.iiab.networkinspector.data.** { *; }
+-keep class com.mousa.networkinspector.data.** { *; }
 -keepclassmembers class * {
     @androidx.room.* <methods>;
 }

@@ -4,13 +4,13 @@
     <application>
         <!-- Debug-only activity entry; actual enablement is controlled from the app module -->
         <activity
-            android:name="com.iiab.networkinspector.ui.NetworkInspectorActivity"
+            android:name="com.mousa.networkinspector.ui.NetworkInspectorActivity"
             android:exported="false" />
 
         <!-- FileProvider for sharing exported network log files.
              Uses a subclass so it doesn't conflict with the host app's FileProvider. -->
         <provider
-            android:name="com.iiab.networkinspector.NetworkInspectorFileProvider"
+            android:name="com.mousa.networkinspector.NetworkInspectorFileProvider"
             android:authorities="${applicationId}.networkinspector.provider"
             android:exported="false"
             android:grantUriPermissions="true">

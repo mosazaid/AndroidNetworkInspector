@@ -60,7 +60,7 @@ val client = OkHttpClient.Builder()
 ### Retrofit converter wiring
 
 ```kotlin
-import com.iiab.networkinspector.retrofit.withNetworkInspector
+import com.mousa.networkinspector.retrofit.withNetworkInspector
 
 Retrofit.Builder()
     .addConverterFactory(
@@ -78,3 +78,24 @@ The inspector registers itself via Koin; a floating bubble appears automatically
 ## License
 
 Apache 2.0
+
+
+
+it was giving this error in sync
+Build file '/Users/1802.mosa/StudioProjects/NetworkInspector/build.gradle' line: 2
+
+Plugin [id: 'com.android.library'] was not found in any of the following sources:
+
+- Gradle Core Plugins (plugin is not in 'org.gradle' namespace)
+- Included Builds (No included builds contain this plugin)
+- Plugin Repositories (plugin dependency must include a version number for this source)
+
+
+because 
+- Root cause: A standalone Android library project requires plugin versions declared in pluginManagement.plugins {} inside settings.gradle. In the main mousa-android-copy project, AGP version was declared in a root buildscript { classpath ... } block — that's not available in the standalone repo.
+
+Fix:
+
+File	Change
+settings.gradle	Added pluginManagement { plugins { ... } } with all 4 plugin versions
+build.gradle	Removed inline version "..." from plugins {} block (versions now come from settings.gradle)

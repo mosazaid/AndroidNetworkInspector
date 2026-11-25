@@ -36,8 +36,11 @@ dependencyResolutionManagement {
 
 ```groovy
 // app/build.gradle or the module that uses it
-debugImplementation 'com.github.mosazaid:NetworkInspector:1.0.0'
+debugImplementation 'com.github.mosazaid:NetworkInspector:1.0.1'
 ```
+Open https://jitpack.io/#mosazaid/AndroidNetworkInspector
+Click the Releases tab, find 1.0.1 and click Get it.
+Wait 1–2 minutes until the log icon turns green. A red icon means the build failed; click it to read the log.
 
 > Tip: use `debugImplementation` so the inspector is only included in debug builds.
 

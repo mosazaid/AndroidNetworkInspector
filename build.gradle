@@ -1,9 +1,9 @@
 plugins {
     id 'com.android.library'
-    id "com.google.devtools.ksp" version "2.3.12"
-    id "org.jetbrains.kotlin.plugin.compose" version "2.3.10"
-    id "org.jetbrains.kotlin.android" version "2.3.10"
-    id("maven-publish")
+    id 'com.google.devtools.ksp'
+    id 'org.jetbrains.kotlin.plugin.compose'
+    id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
